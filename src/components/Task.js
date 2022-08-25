@@ -4,11 +4,12 @@ const Task = ({task}) => {
 
   return (
     <div className='task'>
-        <div>
+        <div className='task__top'>
             <h2 className='task__title'>{task.taskName}</h2>
-            <FaRegTimesCircle className='delete__task'/>
+            <p className='task__due__date'>{task.taskDueDate}</p>
         </div>
-        <p className='task__due__date'>{task.taskDueDate}</p>
+        <FaRegTimesCircle className='delete__task'/>
+        
     </div>
   )
 }

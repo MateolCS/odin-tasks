@@ -1,7 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700;900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Jost', 'sans-serif';
+    background-color: #eaac8b;
+}
+
+.app{
+    margin: 5rem auto;
+    width: 500px;
+    border: 3px solid #355070;
+    border-radius: 5px;
+    min-height: 300px;
 }
 
 .header{
@@ -9,15 +25,26 @@
     justify-content: space-around;
     width: 90%;
     margin: 0 auto;
+    padding: 1rem 0;
 }
 
-.app{
-    margin: 0 auto;
-    max-width: 700px;
+.header__title{
+    font-size: 2rem;
+    font-weight: 900;
 }
 
 .task{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.task__top{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
 }
 
 .container{
@@ -27,20 +54,24 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border: 2px solid #6D597A;
+    border-radius: 5px;
+    margin-bottom: 2rem;
 }
 
 .task__title{
-    font-weight: bold;
-    font-size: 1.3rem;
+    font-weight: 700;
+    font-size: 1.4rem;
 }
 
 .task__due__date{
-    font-size: .9rem;
+    font-size: 1rem;
 }
 
 .delete__task{
+    font-size: 2rem;
     color: #9b2226;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .delete__task:hover{
@@ -48,11 +79,11 @@
 }
 
 .button{
-    font-size: .7rem;
-    padding: .4rem 1rem;
+    font-size: 1.2rem;
+    padding: 0 1.3rem;
     border-radius: 5px;
     color: #fff;
-    font-weight: bold;
-    background-color: #6a994e;
-    border: 2px solid #386641;
+    font-weight: 700;
+    background-color: #b56576;
+    border: 2px solid #6d597a;
 }
