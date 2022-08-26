@@ -22,10 +22,16 @@ body{
 
 .header{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    gap: 1rem;
     width: 90%;
     margin: 0 auto;
     padding: 1rem 0;
+}
+
+.header__top{
+    display: flex;
+    justify-content: space-between;
 }
 
 .header__title{
@@ -33,30 +39,49 @@ body{
     font-weight: 900;
 }
 
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form__input{
+    background-color: #b56576;
+    border: 2px solid #6D597A;
+    border-radius: 5px;
+    color: #9b2226;
+    padding: .3rem;
+    font-size: 1.2rem;
+}
+
 .task{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 2rem;
+    border: 2px solid #355070;
 }
 
 .task__top{
     display: flex;
     flex-direction: column;
     gap: .2rem;
+    margin-left: .7rem;
 }
 
 .container{
+    padding: 1rem;
     margin: 0 auto;
     width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 1rem;
     border: 2px solid #6D597A;
     border-radius: 5px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.3rem;
 }
 
 .task__title{
@@ -72,6 +97,7 @@ body{
     font-size: 2rem;
     color: #9b2226;
     font-weight: 700;
+    margin-right: 1.2rem;
 }
 
 .delete__task:hover{
