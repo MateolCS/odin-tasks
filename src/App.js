@@ -1,9 +1,12 @@
 import './App.css';
 import Tasks from './components/Tasks'
 import Header from './components/Header';
+import { useState } from 'react';
+
+
 function App() {
 
-  const tasks = [
+  const [tasks, setTasks] = useState([
     {
       id: 1,
       taskName: 'Dentist',
@@ -24,13 +27,21 @@ function App() {
       taskName: 'Dentist',
       taskDueDate: '10.10.2022'
     },
-  ]
+  ])
 
+  const addTask = (newTask) =>{
+    setTasks([...tasks, newTask])
+    console.log(tasks.length)
+  }
+
+  const deleteTask = (id) =>{
+    setTasks(tasks.filter((task) => task.id !== id))
+  }
 
   return (
     <div className='app'>
-      <Header/>
-      <Tasks tasks={tasks}/>
+      <Header onAdd={addTask}/>
+      {tasks.length !== 0 && <Tasks tasks={tasks} onDelete={deleteTask}/>}
     </div>
   );
 }

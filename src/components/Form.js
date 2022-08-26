@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Button from './Button'
-const Form = () => {
+const Form = ({onAdd, clickEvent}) => {
 
     const [taskName, setTaskName] = useState('')
     const [taskDueDate, setTaskDueDate] = useState('')
@@ -11,15 +11,16 @@ const Form = () => {
 
         if(!taskName || !taskDueDate){
             alert('Please fill all required fields')
+            return 
         }
 
         const id = Math.floor(Math.random() * 10000) +1
-        const newTask = {id, taskName, taskDueDate}
+        
+        onAdd({id, taskName, taskDueDate})
 
         setTaskDueDate('')
         setTaskName('')
-
-        console.log(newTask) 
+        clickEvent()
     }
 
   return (
